@@ -1,0 +1,1 @@
+System.register(["./index-legacy-DlBVO7lm.js"],(function(e,t){"use strict";var n,c;return{setters:[e=>{n=e.aL,c=e.a_}],execute:function(){e("c",(function(e,{args:t=[],done:r,canceled:s,error:a}){if(e){const i=e.apply(null,t);n(i)?i.then((e=>{e?r():s&&s()})).catch(a||c):i?r():s&&s()}else r()}))}}}));
