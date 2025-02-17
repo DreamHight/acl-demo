@@ -34,9 +34,7 @@ export default ({ mode }: ConfigEnv): UserConfig => {
         // '~@': path.join(__dirname, './src'),
         // '@': path.join(__dirname, './src'),
         // '~': path.join(__dirname, './src/assets'),
-        // "~@": fileURLToPath(new URL("./src", import.meta.url)),
         "@": fileURLToPath(new URL('./src', import.meta.url)),
-        // "~": fileURLToPath(new URL("./src/assets", import.meta.url)),
       },
     },
 

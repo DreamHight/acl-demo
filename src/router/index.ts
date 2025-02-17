@@ -1,6 +1,6 @@
-// import { createRouter, createWebHistory } from 'vue-router/auto'
-// import { routes } from 'vue-router/auto-routes'
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router/auto'
+import { routes } from 'vue-router/auto-routes'
+// import { createRouter, createWebHistory } from "vue-router";
 
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
@@ -15,9 +15,6 @@ const basicRoutes = [
   {
     path: "/",
     name: "home",
-    // meta:{
-    //   title: "基础表单",
-    // },
     component: () => import(/* webpackChunkName: "home" */ "../pages/index.vue"),
   },
   {
@@ -48,9 +45,10 @@ const basicRoutes = [
 ]
 const router = createRouter({
   // history: createWebHistory(import.meta.env.VITE_APP_PUBLIC_PATH),
-  // routes,
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: basicRoutes,
+  history: createWebHashHistory(),
+  routes,
+  // history: createWebHistory(import.meta.env.BASE_URL),
+  // routes: basicRoutes,
 })
 
 router.beforeEach((to: EnhancedRouteLocation, from, next) => {
