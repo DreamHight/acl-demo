@@ -45,8 +45,7 @@ const basicRoutes = [
 ]
 const router = createRouter({
   // history: createWebHistory(import.meta.env.VITE_APP_PUBLIC_PATH),
-  // history: createWebHashHistory(),
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
   // history: createWebHistory(import.meta.env.BASE_URL),
   // routes: basicRoutes,
