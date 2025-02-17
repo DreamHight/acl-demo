@@ -6,6 +6,7 @@ import viewport from 'postcss-mobile-forever'
 import autoprefixer from 'autoprefixer'
 import { createVitePlugins } from './build/vite'
 import { exclude, include } from './build/vite/optimize'
+import { fileURLToPath } from 'node:url'
 
 export default ({ mode }: ConfigEnv): UserConfig => {
   const root = process.cwd()
@@ -30,9 +31,12 @@ export default ({ mode }: ConfigEnv): UserConfig => {
 
     resolve: {
       alias: {
-        '~@': path.join(__dirname, './src'),
-        '@': path.join(__dirname, './src'),
-        '~': path.join(__dirname, './src/assets'),
+        // '~@': path.join(__dirname, './src'),
+        // '@': path.join(__dirname, './src'),
+        // '~': path.join(__dirname, './src/assets'),
+        "~@": fileURLToPath(new URL("./src", import.meta.url)),
+        "@": fileURLToPath(new URL("./src", import.meta.url)),
+        "~": fileURLToPath(new URL("./src/assets", import.meta.url)),
       },
     },
 
