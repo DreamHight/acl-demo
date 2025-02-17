@@ -382,7 +382,7 @@ function operateHandler(index: number): void {
       position: fixed;
       left: 40px;
       right: 40px;
-      bottom: 132px;
+      bottom: 130px;
       z-index: 8;
       margin: auto;
       width: 180px;
