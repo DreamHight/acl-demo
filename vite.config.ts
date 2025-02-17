@@ -12,7 +12,7 @@ export default ({ mode }: ConfigEnv): UserConfig => {
   const env = loadEnv(mode, root)
 
   return {
-    base: './',//'./acl-demo/',//env.VITE_APP_PUBLIC_PATH,
+    base: './acl-demo/', // './', //'./acl-demo/',//env.VITE_APP_PUBLIC_PATH,
     plugins: createVitePlugins(),
 
     server: {

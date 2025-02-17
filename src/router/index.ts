@@ -25,14 +25,14 @@ const basicRoutes = [
     component: () => import(/* webpackChunkName: "home" */ "../pages/home/homeIndex.vue"),
   },
   {
-    path: "/agreement/infoAgreement",
-    name: "infoAgreement",
-    component: () => import(/* webpackChunkName: "home" */ "../pages/agreement/infoAgreement.vue"),
+    path: "/explain/awarding",
+    name: "awarding",
+    component: () => import(/* webpackChunkName: "explain" */ "../pages/explain/awarding.vue"),
   },
   {
-    path: "/agreement/serviceAgreement",
-    name: "serviceAgreement",
-    component: () => import(/* webpackChunkName: "home" */ "../pages/agreement/serviceAgreement.vue"),
+    path: "/explain/illustration",
+    name: "illustration",
+    component: () => import(/* webpackChunkName: "explain" */ "../pages/explain/illustration.vue"),
   },
   {
     path: "/product/details",
