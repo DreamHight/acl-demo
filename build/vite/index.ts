@@ -97,7 +97,7 @@ export function createVitePlugins() {
         theme_color: '#ffffff',
         icons: [
           {
-            src: '/pwa-192x192.png',
+            src: '/acl-demo/pwa-192x192.png',
             sizes: '192x192',
             type: 'image/png',
           },
