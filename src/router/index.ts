@@ -1,5 +1,6 @@
-import { createRouter, createWebHistory } from 'vue-router/auto'
-import { routes } from 'vue-router/auto-routes'
+// import { createRouter, createWebHistory } from 'vue-router/auto'
+// import { routes } from 'vue-router/auto-routes'
+import { createRouter, createWebHistory } from "vue-router";
 
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
