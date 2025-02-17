@@ -40,16 +40,16 @@ const basicRoutes = [
     component: () => import(/* webpackChunkName: "details" */ "../pages/product/details.vue"),
   },
   {
-    path: "/result/fail",
+    path: "/fail",
     name: "fail",
     component: () => import(/* webpackChunkName: "fail" */ "../pages/result/fail.vue"),
   },
 ]
 const router = createRouter({
-  history: createWebHistory(import.meta.env.VITE_APP_PUBLIC_PATH),
-  routes,
-  // history: createWebHistory(import.meta.env.BASE_URL),
-  // routes: basicRoutes,
+  // history: createWebHistory(import.meta.env.VITE_APP_PUBLIC_PATH),
+  // routes,
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes: basicRoutes,
 })
 
 router.beforeEach((to: EnhancedRouteLocation, from, next) => {
