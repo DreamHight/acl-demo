@@ -10,7 +10,7 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: 'Vue + Vite H5 Starter Template',
+      content: 'Vue + Vite H5 Starter Template.',
     },
     {
       name: 'theme-color',
