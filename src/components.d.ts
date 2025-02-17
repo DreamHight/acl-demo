@@ -7,11 +7,13 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    2: typeof import('./components/ExplainBox/ExplainBox copy 2.vue')['default']
     AClButton: typeof import('./components/AClButton/index.vue')['default']
     ArrowBack: typeof import('./components/ArrowBack/ArrowBack.vue')['default']
     Captcha: typeof import('./components/Captcha.vue')['default']
     Chart: typeof import('./components/Chart/index.vue')['default']
     Container: typeof import('./components/Container.vue')['default']
+    copy: typeof import('./components/ExplainBox/ExplainBox copy.vue')['default']
     ExplainBox: typeof import('./components/ExplainBox/ExplainBox.vue')['default']
     'ExplainBox copy': typeof import('./components/ExplainBox/ExplainBox copy.vue')['default']
     'ExplainBox copy 2': typeof import('./components/ExplainBox/ExplainBox copy 2.vue')['default']
