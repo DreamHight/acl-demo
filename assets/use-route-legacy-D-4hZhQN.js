@@ -1,0 +1,1 @@
+System.register(["./index-legacy-DRPuK22t.js"],(function(e,r){"use strict";var t;return{setters:[e=>{t=e.ac}],execute:function(){function r({to:e,url:r,replace:t,$router:n}){e&&n?n[t?"replace":"push"](e):r&&(t?location.replace(r):location.href=r)}e({r:r,u:function(){const e=t().proxy;return()=>r(e)}}),e("a",{to:[String,Object],url:String,replace:Boolean})}}}));
