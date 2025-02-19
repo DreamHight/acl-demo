@@ -11,9 +11,9 @@
     </div>
 
     <div class="product-image">
-      <img width="100px" height="100px" :src="ImageXyrtsStatic" />
-      <div class="text-center">
-        <img width="263px" :src="productItem.images" />
+      <img width="100px" height="100px" :src="ImageXyrts" />
+      <div class="product_img text-center">
+        <img width="100%" :src="productItem.images" />
       </div>
       <img
         v-if="productItem.certified"
@@ -126,9 +126,10 @@
 
 <script setup lang="ts">
 import { showToast } from 'vant'
-import ImageXyrtsStatic from '@/assets/images/xyrts.png'
+import ImageXyrts from '@/assets/images/xyrts.gif'
+// import ImageXyrtsStatic from '@/assets/images/xyrts.png'
 import ImageFicusDiscovery from '@/assets/images/ficus_discovery.png'
-import ImageProduct1 from '@/assets/images/product_1.jpg'
+import ImageProduct1 from '@/assets/images/product_1.png'
 import ImageProduct3 from '@/assets/images/product_3.png'
 import ImageProductLogo from '@/assets/images/product_logo.jpeg'
 import IconArrowDown from '@/assets/icons/IconArrowDown.vue'
@@ -172,67 +173,52 @@ const productList: IProduct[] = [
       {
         color: '#F00',
         name: '品牌',
-        value: '百威236',
+        value: '潮迹',
       },
       {
         color: '#FCC864',
-        name: '酒精度',
-        value: '3.6%',
+        name: '生产厂家',
+        value: '广东恒源冷健有限公司',
       },
       {
         color: '#9747FF',
-        name: '淨含量',
-        value: '236ml x24',
+        name: '包裝方式',
+        value: '袋装',
       },
       {
         color: '#0FA388',
-        name: '儲藏方法',
-        value: '5度-25度',
+        name: '产地',
+        value: '广东省汕头市',
       },
       {
         color: '#6307DC',
-        name: '生產廠家',
-        value: '百威英博',
+        name: '特产品类',
+        value: '汕头牛肉丸',
       },
       {
         color: '#FF47AA',
-        name: '包裝方式',
-        value: '箱體',
+        name: '肉丸种类',
+        value: '实心牛肉丸',
       },
       {
         color: '#37CFFF',
-        name: '產地',
-        value: '四川省資陽市',
+        name: '商品标准号',
+        value: 'G8-10379',
       },
       {
         color: '#B7B343',
-        name: '貨號',
-        value: 'GB/T4927',
+        name: '原料与配料',
+        value: '牛肉、鸡肉、食用淀粉、食用盐等',
       },
       {
         color: '#FF47ED',
-        name: '類型',
-        value: '啤酒',
+        name: '产品包裝日期',
+        value: '见包装',
       },
       {
         color: '#42737E',
-        name: '商品條型碼',
-        value: '563746876989789985',
-      },
-      {
-        color: '#D48D22',
-        name: '原料與配料',
-        value: '水,麥芽,大米,啤酒花',
-      },
-      {
-        color: '#FF4747',
-        name: '生產日期',
-        value: '見瓶身',
-      },
-      {
-        color: '#FF47ED',
-        name: '產品包裝日期',
-        value: '見瓶身',
+        name: '产品生产批次',
+        value: '见包装',
       },
     ]
   },
@@ -392,9 +378,12 @@ onMounted(() => {
     border-radius: 10px;
     margin: 18px;
     background-color: #FFF;
+    .product_img {
+      margin-top: -100px;
+    }
     .ficus_discovery {
       position: absolute;
-      bottom: 0;
+      bottom: 20px;
       right: 0;
       transform: rotate(20deg);
     }

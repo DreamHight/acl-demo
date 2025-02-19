@@ -22,15 +22,46 @@
       <!-- 单产品封面 start -->
       <div v-if="verifyTheTruth === 'single'" class="bg-marker">
         <img :src="ImageMarker" />
-        <div class="img-product" />
+        <div class="img-product">
+          <img width="100%" :src="ImageProduct0" />
+        </div>
+        <img class="cover-image" width="100%" :src="ImageProduct1" />
+        <div class="zoom-big" />
+
+        <!-- <div class="img-product" />
         <img class="cover-image" :src="ImageProduct3" />
-        <div class="zoom-big" :class="{ 'zoom-big--motion': zoomBigMotion }" />
+        <div class="zoom-big" :class="{ 'zoom-big--motion': zoomBigMotion }" /> -->
       </div>
       <!-- 单产品封面 end -->
 
       <!-- 多产品封面 start -->
       <div v-if="verifyTheTruth === 'multiple'" class="product-shelf">
         <div class="product-shelf__item">
+          <div class="bg-img0">
+            <img class="img" :src="ImageProduct1" />
+            <img class="img" :src="ImageProduct2" />
+            <img class="img" :src="ImageProduct3" />
+          </div>
+          <img class="bg-imgv1" :src="ImageshelfV1" />
+        </div>
+        <div class="product-shelf__item">
+          <div class="bg-img0">
+            <img class="img" :src="ImageProduct4" />
+            <img class="img" :src="ImageProduct5" />
+            <img class="img" :src="ImageProduct6" />
+          </div>
+          <img class="bg-imgv1" :src="ImageshelfV1" />
+        </div>
+        <div class="product-shelf__item">
+          <div class="bg-img0">
+            <img class="img" :src="ImageProduct7" />
+            <img class="img" :src="ImageProduct8" />
+            <img class="img" :src="ImageProduct9" />
+          </div>
+          <img class="bg-imgv1" :src="ImageshelfV1" />
+        </div>
+
+        <!-- <div class="product-shelf__item">
           <img class="bg-img0 bg-img1" :src="Imageshelf1" />
           <img class="bg-imgv1" :src="ImageshelfV1" />
         </div>
@@ -41,28 +72,33 @@
         <div class="product-shelf__item">
           <img class="bg-img0 bg-img3" :src="Imageshelf3" />
           <img class="bg-imgv1" :src="ImageshelfV1" />
-        </div>
+        </div> -->
 
-        <div class="product-show">
+        <!-- <div class="product-show">
           <img class="product-show__img" :src="ImageProduct3" />
           <img
             class="product-show__img-search"
             :src="ImageSearch"
           />
-        </div>
+        </div> -->
 
-        <div v-show="zoomBigMotion" class="light-cart">
+        <!-- <div v-show="zoomBigMotion" class="light-cart">
           <img class="light-cart__light" :src="ImageLight" />
           <img class="light-cart__cart" :src="ImageCart" />
-        </div>
+        </div> -->
       </div>
       <!-- 多产品封面 end -->
+
+      <div v-show="zoomBigMotion" class="light-cart">
+        <img class="light-cart__light" :src="ImageLight" />
+        <img class="light-cart__cart" :src="ImageCart" />
+      </div>
 
       <div v-if="showLeftBottomLogo" class="left-bottom-logo">
         <img
           width="75px"
           height="75px"
-          :src="ImageXyrtsStatic"
+          :src="ImageXyrts"
         />
       </div>
       <div v-if="showSearch" class="search-btn-box" @click="searchHandler">
@@ -118,11 +154,20 @@ import ImageBgAclRounded from '@/assets/images/bg_acl_rounded.png'
 import ImageXyrts from '@/assets/images/xyrts.gif'
 import ImageXyrtsStatic from '@/assets/images/xyrts.png'
 import ImageMarker from '@/assets/images/marker.png'
+import ImageProduct1 from '@/assets/images/product_1.png'
+import ImageProduct2 from '@/assets/images/product_2.png'
 import ImageProduct3 from '@/assets/images/product_3.png'
+import ImageProduct4 from '@/assets/images/product_4.png'
+import ImageProduct5 from '@/assets/images/product_5.png'
+import ImageProduct6 from '@/assets/images/product_6.png'
+import ImageProduct7 from '@/assets/images/product_7.png'
+import ImageProduct8 from '@/assets/images/product_8.png'
+import ImageProduct9 from '@/assets/images/product_9.png'
 import ImageshelfV1 from '@/assets/images/shelf_v1.png'
-import Imageshelf1 from '@/assets/images/shelf_1.png'
-import Imageshelf2 from '@/assets/images/shelf_2.png'
-import Imageshelf3 from '@/assets/images/shelf_3.png'
+// import Imageshelf1 from '@/assets/images/shelf_1.png'
+// import Imageshelf2 from '@/assets/images/shelf_2.png'
+// import Imageshelf3 from '@/assets/images/shelf_3.png'
+import ImageProduct0 from '@/assets/images/product_0.png'
 import ImageLight from '@/assets/images/light.png'
 import ImageCart from '@/assets/images/cart.png'
 import ImageSearch from '@/assets/images/search.png'
@@ -151,6 +196,7 @@ const props = defineProps({
   },
   staticXyrts: {
     type: Boolean,
+    default: false,
   },
   zoomBigMotion: {
     type: Boolean,
@@ -271,34 +317,58 @@ function operateHandler(index: number): void {
       text-align: center;
       .img-product {
         position: absolute;
-        top: -40px;
-        width: 90vw;
-        height: 495px;
-        background-image: url('@/assets/images/product_2.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
+        top: 30px;
+        left: 60px;
+        right: 50px;
+        margin: auto;
       }
       .cover-image {
         position: absolute;
-        top: -42px;
-        left: -63px;
-        width: 500px;
-        -webkit-mask-image: radial-gradient(circle at center, black 10%, transparent 30%);
-        mask-image: radial-gradient(circle at center, black 10%, transparent 30%);
+        top: 30px;
+        left: 40px;
+        -webkit-mask-image: radial-gradient(circle at 55% 20%, black 10%, transparent 30%);
+        mask-image: radial-gradient(circle at 55% 20%, black 10%, transparent 30%);
       }
       .zoom-big {
         position: absolute;
-        top: 120px;
-        left: 85px;
-        width: 252px;
-        height: 260px;
+        top: 60px;
+        left: 170px;
+        width: 182px;
+        height: 190px;
         background-image: url('@/assets/images/search.png');
         background-repeat: no-repeat;
         background-size: cover;
-        &--motion {
-          animation: zoomOutMotion 2s linear infinite;
-        }
       }
+      // .img-product {
+      //   position: absolute;
+      //   top: -40px;
+      //   width: 90vw;
+      //   height: 495px;
+      //   background-image: url('@/assets/images/product_2.jpg');
+      //   background-repeat: no-repeat;
+      //   background-size: cover;
+      // }
+      // .cover-image {
+      //   position: absolute;
+      //   top: -42px;
+      //   left: -63px;
+      //   width: 500px;
+      //   -webkit-mask-image: radial-gradient(circle at center, black 10%, transparent 30%);
+      //   mask-image: radial-gradient(circle at center, black 10%, transparent 30%);
+      // }
+      // .zoom-big {
+      //   position: absolute;
+      //   top: 120px;
+      //   left: 85px;
+      //   width: 252px;
+      //   height: 260px;
+      //   background-image: url('@/assets/images/search.png');
+      //   background-repeat: no-repeat;
+      //   background-size: cover;
+      //   &--motion {
+      //     animation: zoomOutMotion 2s linear infinite;
+      //   }
+      // }
     }
 
     .product-shelf {
@@ -309,17 +379,26 @@ function operateHandler(index: number): void {
       margin: auto;
       .product-shelf__item {
         text-align: center;
+        // .bg-img0 {
+        //   transform: translateY(14px);
+        // }
+        // .bg-img1 {
+        //   width: 80vw;
+        // }
+        // .bg-img2 {
+        //   width: 86vw;
+        // }
+        // .bg-img3 {
+        //   width: 88vw;
+        // }
         .bg-img0 {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           transform: translateY(14px);
-        }
-        .bg-img1 {
-          width: 80vw;
-        }
-        .bg-img2 {
-          width: 86vw;
-        }
-        .bg-img3 {
-          width: 88vw;
+          .img {
+            width: 100px;
+          }
         }
         .bg-imgv1 {
           width: 100vw;
@@ -328,48 +407,59 @@ function operateHandler(index: number): void {
 
       .product-show {
         position: absolute;
-        top: -70px;
-        left: -20px;
+        top: 110px;
+        left: 25%;
         .product-show__img {
           width: 200px;
         }
         .product-show__img-search {
-          position: absolute;
-          bottom: -30px;
-          left: 60px;
           width: 150px;
         }
       }
+      // .product-show {
+      //   position: absolute;
+      //   top: -70px;
+      //   left: -20px;
+      //   .product-show__img {
+      //     width: 200px;
+      //   }
+      //   .product-show__img-search {
+      //     position: absolute;
+      //     bottom: -30px;
+      //     left: 60px;
+      //     width: 150px;
+      //   }
+      // }
+    }
 
-      .light-cart {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
+    .light-cart {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 9;
+      width: 100%;
+      height: 100%;
+      margin: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+      .light-cart__light {
+        position: absolute;
         left: 0;
-        z-index: 9;
-        width: 100%;
-        height: 100%;
+        right: 0;
+        bottom: 30vh;
         margin: auto;
-        background-color: rgba(0, 0, 0, 0.5);
-        .light-cart__light {
-          position: absolute;
-          left: 0;
-          right: 0;
-          bottom: 30vh;
-          margin: auto;
-          width: 200px;
-          opacity: 0;
-          animation: lightMotion 0.8s linear forwards 0.5s;
-        }
-        .light-cart__cart {
-          position: absolute;
-          right: -1000px;
-          bottom: 130px;
-          margin: auto;
-          width: 90%;
-          animation: cartMotion 0.5s linear forwards;
-        }
+        width: 200px;
+        opacity: 0;
+        animation: lightMotion 0.8s linear forwards 0.5s;
+      }
+      .light-cart__cart {
+        position: absolute;
+        right: -1000px;
+        bottom: 130px;
+        margin: auto;
+        width: 90%;
+        animation: cartMotion 0.5s linear forwards;
       }
     }
 

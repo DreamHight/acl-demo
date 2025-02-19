@@ -4,7 +4,6 @@
     :agreements="agreements"
     :show-agreement="showAgreement"
     :show-search="true"
-    :static-xyrts="true"
     :rounded-bg="roundedBg"
     :zoom-big-motion="zoomBigMotion"
     :show-left-bottom-logo="showLeftBottomLogo"
