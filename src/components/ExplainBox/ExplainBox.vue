@@ -395,6 +395,7 @@ function operateHandler(index: number): void {
           display: flex;
           align-items: center;
           justify-content: center;
+          gap: 10px;
           transform: translateY(14px);
           .img {
             width: 100px;
