@@ -1,1 +1,0 @@
-System.register(["./index-legacy-VnFJ7nNc.js"],(function(e,t){"use strict";var n,c;return{setters:[e=>{n=e.aM,c=e.a$}],execute:function(){e("c",(function(e,{args:t=[],done:r,canceled:s,error:a}){if(e){const i=e.apply(null,t);n(i)?i.then((e=>{e?r():s&&s()})).catch(a||c):i?r():s&&s()}else r()}))}}}));
