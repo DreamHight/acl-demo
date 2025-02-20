@@ -396,7 +396,7 @@ onMounted(() => {
   }
   .already-scan {
     padding: 4px;
-    padding-right: 20px;
+    // padding-right: 20px;
     margin: 0 18px 14px;
     .already-scan__text {
       font-family: "Microsoft New Tai Lue";
