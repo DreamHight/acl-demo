@@ -395,6 +395,7 @@ onMounted(() => {
     color: #FFF;
   }
   .already-scan {
+    gap: 8px;
     padding: 4px;
     // padding-right: 20px;
     margin: 0 18px 14px;
