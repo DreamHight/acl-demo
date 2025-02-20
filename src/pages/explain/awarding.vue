@@ -7,7 +7,7 @@
     :verify-the-truth="verifyTheTruth"
   >
     <template #description>
-      「未年人不得购彩及兑奖，体彩即开票相关的信息，可浏览中国体育彩票管理中心官方网站 <a href="javascript:void(0)" @click="toLottery">www.lottery.gov.cn</a>，或向本地体育彩票管理机构咨询。」
+      未年人不得购彩及兑奖，体彩即开票相关的信息，可浏览中国体育彩票管理中心官方网站 <a href="javascript:void(0)" @click="toLottery">www.lottery.gov.cn</a>，或向本地体育彩票管理机构咨询。
     </template>
   </ExplainBox>
 </template>
