@@ -165,7 +165,7 @@ const productList: IProduct[] = [
     productName: '潮迹潮汕-潮汕牛肉丸',
     images: ImageProduct1,
     certified: true,
-    scanTime: '此產品已在30/12/2024於北京市掃瞄過',
+    scanTime: '此产品已在2024年12月30日在北京市扫描过。',
     ticketList: [
       '310842600132413000',
     ],
@@ -227,7 +227,7 @@ const productList: IProduct[] = [
     productName: 'L&S-DEAR.SARA',
     images: ImageProduct3,
     certified: true,
-    scanTime: '此產品已在30/12/2024於北京市掃瞄過',
+    scanTime: '此产品已在2024年12月30日在北京市扫描过。',
     ticketList: [
       '310842600132413600',
       '310842600132413599',
