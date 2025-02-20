@@ -27,7 +27,7 @@
       <div v-if="verifyTheTruth === 'single'" class="search-btn-box" @click="searchHandler">
         <div class="search-btn flex-between">
           <IconZoomOut />
-          <span class="text-white">獲得產品資料</span>
+          <span class="text-white">获得产品资料</span>
         </div>
       </div>
       <!-- 单产品封面 end -->
@@ -115,7 +115,7 @@ const props = defineProps({
   },
   title: {
     type: String,
-    default: '說明',
+    default: '说明',
   },
   descriptions: {
     type: Array as () => string[],

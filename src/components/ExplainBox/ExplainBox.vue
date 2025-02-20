@@ -104,18 +104,28 @@
       <div v-if="showSearch" class="search-btn-box" @click="searchHandler">
         <div class="search-btn">
           <IconZoomOut />
-          <span class="text">獲得產品資料</span>
+          <span class="text">获得产品资料</span>
         </div>
       </div>
 
-      <div v-if="descriptions.length" class="content">
+      <div v-if="customDescription" class="content">
+        <p class="title">{{ title }}</p>
+        <div class="paragraph-box">
+          <p class="paragraph">
+            <slot name="description" />
+          </p>
+        </div>
+      </div>
+      <div v-else-if="descriptions.length" class="content">
         <p class="title">{{ title }}</p>
         <div class="paragraph-box">
           <p
             v-for="(desc, index) in descriptions"
             :key="index"
             class="paragraph"
-          >{{ desc }}</p>
+          >
+            {{ desc }}
+          </p>
         </div>
       </div>
     </div>
@@ -170,7 +180,7 @@ import ImageshelfV1 from '@/assets/images/shelf_v1.png'
 import ImageProduct0 from '@/assets/images/product_0.png'
 import ImageLight from '@/assets/images/light.png'
 import ImageCart from '@/assets/images/cart.png'
-import ImageSearch from '@/assets/images/search.png'
+// import ImageSearch from '@/assets/images/search.png'
 import ImageFooter from '@/assets/images/footer.png'
 import IconZoomOut from '@/assets/icons/IconZoomOut.vue'
 
@@ -181,11 +191,14 @@ const props = defineProps({
   },
   title: {
     type: String,
-    default: '說明',
+    default: '说明',
   },
   descriptions: {
     type: Array as () => string[],
     default: () => [],
+  },
+  customDescription: {
+    type: Boolean,
   },
   agreements: {
     type: Array as () => string[],

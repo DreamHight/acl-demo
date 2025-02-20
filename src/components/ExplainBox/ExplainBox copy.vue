@@ -38,7 +38,7 @@ import ImageFooter from '@/assets/images/footer.png'
 const props = defineProps({
   title: {
     type: String,
-    default: '說明',
+    default: '说明',
   },
   descriptions: {
     type: Array as () => string[],
